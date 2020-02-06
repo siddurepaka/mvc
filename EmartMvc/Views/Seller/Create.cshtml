@@ -1,0 +1,92 @@
+﻿
+@model EmartMvc.Models.SellerViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Seller</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form enctype="multipart/form-data" asp-action="Create">
+            <div class="form-group">
+                <label asp-for="S_username" class="control-label"></label>
+                <input asp-for="S_username" class="form-control" />
+                <span asp-validation-for="S_username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_password" class="control-label"></label>
+                <input asp-for="S_password" class="form-control" />
+                <span asp-validation-for="S_password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_comapnyname" class="control-label"></label>
+                <input asp-for="S_comapnyname" class="form-control" />
+                <span asp-validation-for="S_comapnyname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_gstin" class="control-label"></label>
+                <input asp-for="S_gstin" class="form-control" />
+                <span asp-validation-for="S_gstin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_abtcompany" class="control-label"></label>
+                <input asp-for="S_abtcompany" class="form-control" />
+                <span asp-validation-for="S_abtcompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_postaladdress" class="control-label"></label>
+                <input asp-for="S_postaladdress" class="form-control" />
+                <span asp-validation-for="S_postaladdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_website" class="control-label"></label>
+                <input asp-for="S_website" class="form-control" />
+                <span asp-validation-for="S_website" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_emailid" class="control-label"></label>
+                <input asp-for="S_emailid" class="form-control" />
+                <span asp-validation-for="S_emailid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_mobilenum" class="control-label"></label>
+                <input asp-for="S_mobilenum" class="form-control" />
+                <span asp-validation-for="S_mobilenum" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <label asp-for="photo" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input asp-for="photo" class="form-control custom-file-input">
+                        <label class="custom-file-label">Choose File...</label>
+                    </div>
+                </div>
+            </div>
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            @section Scripts {
+                <script>
+            $(document).ready(function () {
+                $('.custom-file-input').on("change", function () {
+                    var fileName = $(this).val().split("\\").pop();
+                    $(this).next('.custom-file-label').html(fileName);
+                });
+            });
+                </script>
+            }
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

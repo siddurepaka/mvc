@@ -1,0 +1,6 @@
+E:\C#\MenuProgram\obj\Debug\MenuProgram.csprojAssemblyReference.cache
+E:\C#\MenuProgram\bin\Debug\MenuProgram.exe.config
+E:\C#\MenuProgram\bin\Debug\MenuProgram.exe
+E:\C#\MenuProgram\bin\Debug\MenuProgram.pdb
+E:\C#\MenuProgram\obj\Debug\MenuProgram.exe
+E:\C#\MenuProgram\obj\Debug\MenuProgram.pdb

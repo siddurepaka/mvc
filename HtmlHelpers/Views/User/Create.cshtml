@@ -1,0 +1,61 @@
+﻿@model HtmlHelpers.Models.User
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+@using (Html.BeginForm())
+{
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+        
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+        <td>@Html.ValidationMessageFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+       
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+        <td>@Html.ValidationMessageFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td>DOB</td>
+        <td>@Html.TextBoxFor(m => m.DOB, null, new { @type = "Date" })</td>
+        <td>@Html.ValidationMessageFor(m => m.DOB)</td>
+    </tr>
+    <tr>
+        <td>MobileNo</td>
+        
+        <td>@Html.TextBoxFor(m => m.Mobileno)</td>
+        <td>@Html.ValidationMessageFor(m => m.Mobileno)</td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        @*<td>@Html.DropDownListFor(m => m.Country, new SelectList(new string[] { "INDIA", "USA", "CHINA" }))</td>
+        </tr>*@
+        <td>
+            @Html.DropDownListFor(m => m.Country, ViewBag.Country as SelectList)
+        <td>@Html.ValidationMessageFor(m => m.Country)</td>
+        </td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>@Html.TextBoxFor(m => m.Uname)</td>
+        <td>@Html.ValidationMessageFor(m => m.Uname)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.PasswordFor(m => m.password)</td>
+        <td>@Html.ValidationMessageFor(m => m.password)</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Register" />
+        </td>
+    </tr>
+</table>
+
+}
+

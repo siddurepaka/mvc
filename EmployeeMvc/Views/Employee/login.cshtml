@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "login";
+}
+
+<h1>login</h1>
+
+@using (Html.BeginForm())
+{
+<table class="table table-bordered">
+    <tr>
+        <td>Eid</td>
+        <td>@Html.TextBox("eid")</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.Password("pwd")</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Login" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="text-danger">@ViewData["err"]</span>
+        </td>
+    </tr>
+</table>
+}
+@Html.ActionLink("SignUp For User","Create")

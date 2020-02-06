@@ -1,0 +1,72 @@
+﻿@model EmartMvc.Models.Seller
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Registration</h1>
+
+<h4>Seller</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="S_username" class="control-label"></label>
+                <input asp-for="S_username" class="form-control" />
+                <span asp-validation-for="S_username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_password" class="control-label"></label>
+                <input asp-for="S_password" class="form-control" />
+                <span asp-validation-for="S_password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_comapnyname" class="control-label"></label>
+                <input asp-for="S_comapnyname" class="form-control" />
+                <span asp-validation-for="S_comapnyname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_gstin" class="control-label"></label>
+                <input asp-for="S_gstin" class="form-control" />
+                <span asp-validation-for="S_gstin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_abtcompany" class="control-label"></label>
+                <input asp-for="S_abtcompany" class="form-control" />
+                <span asp-validation-for="S_abtcompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_postaladdress" class="control-label"></label>
+                <input asp-for="S_postaladdress" class="form-control" />
+                <span asp-validation-for="S_postaladdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_website" class="control-label"></label>
+                <input asp-for="S_website" class="form-control" />
+                <span asp-validation-for="S_website" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_emailid" class="control-label"></label>
+                <input asp-for="S_emailid" class="form-control" />
+                <span asp-validation-for="S_emailid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="S_mobilenum" class="control-label"></label>
+                <input asp-for="S_mobilenum" class="form-control" />
+                <span asp-validation-for="S_mobilenum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            ViewBag.message
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

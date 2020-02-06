@@ -1,0 +1,51 @@
+﻿@model EmartMvc.Models.Buyer
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Registration</h1>
+
+<h4>Buyer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="B_username" class="control-label"></label>
+                <input asp-for="B_username" class="form-control" />
+                <span asp-validation-for="B_username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="B_password" class="control-label"></label>
+                <input asp-for="B_password" class="form-control" />
+                <span asp-validation-for="B_password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="B_mobilenum" class="control-label"></label>
+                <input asp-for="B_mobilenum" class="form-control" />
+                <span asp-validation-for="B_mobilenum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="B_createdatetime" class="control-label"></label>
+                <input asp-for="B_createdatetime" class="form-control" />
+                <span asp-validation-for="B_createdatetime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            @ViewBag.message
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

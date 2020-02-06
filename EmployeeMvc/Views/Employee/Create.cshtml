@@ -1,0 +1,38 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+@using (Html.BeginForm())
+{
+<table class="table table-bordered">
+    <tr>
+        <td>EmployeeID</td>
+        <td>@Html.TextBoxFor(m => m.Eid)</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Designation</td>
+        <td>@Html.DropDownListFor(m => m.Designation, ViewBag.designation as SelectList)</td>
+    </tr>
+    <tr>
+        <td>ProjectName</td>
+        <td>@Html.DropDownListFor(m => m.ProjectName, ViewBag.projectName as SelectList)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.Password("pwd")</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Login" />
+        </td>
+    </tr>
+
+</table>
+}

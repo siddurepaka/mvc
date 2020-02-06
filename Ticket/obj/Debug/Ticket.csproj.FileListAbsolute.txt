@@ -1,0 +1,6 @@
+E:\C#\Ticket\obj\Debug\Ticket.csprojAssemblyReference.cache
+E:\C#\Ticket\bin\Debug\Ticket.exe.config
+E:\C#\Ticket\bin\Debug\Ticket.exe
+E:\C#\Ticket\bin\Debug\Ticket.pdb
+E:\C#\Ticket\obj\Debug\Ticket.exe
+E:\C#\Ticket\obj\Debug\Ticket.pdb

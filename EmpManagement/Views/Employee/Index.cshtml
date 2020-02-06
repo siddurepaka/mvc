@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Employee>
+@*@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}*@
+
+
+    
+    
+        <h1>Employee Details</h1>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>NAme</td>
+                <td>Email</td>
+                <td>DEpt</td>
+            </tr>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.Name</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.Dept</td>
+                </tr>
+            }
+        </table>
+    
+    
